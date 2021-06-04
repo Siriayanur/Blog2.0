@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useLocation ,Link} from 'react-router-dom';
 import './Sidebar.css'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
-function Sidebar() {
+import axios from 'axios';
+
+function Sidebar()
+{
+    const [categ, setCateg] = useState([]);
+    const {search} = useLocation()
+    useEffect(() =>
+    {
+        const getCategories = async () =>
+        {
+            const result = await axios.get('http://localhost:5000/api/categories')
+            setCateg(result.data);
+        }
+        getCategories();
+        
+    },[])
     return (
         <div className="sidebar">
             <div className="sidebarItem">
@@ -18,10 +34,7 @@ function Sidebar() {
             <div className="sidebarItem">
                 <span className="sidebarTitle">CATEGORIES</span>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem">Tech</li>
-                    <li className="sidebarListItem">Formal</li>
-                    <li className="sidebarListItem">Spice</li>
-                    <li className="sidebarListItem">Sweet</li>
+                    {categ.map((c,i) => <Link  key={i} style={{textDecoration:'none', color:'inherit'}} to={`/?cat=${c.name}`}><li className="sidebarListItem">{ c.name}</li></Link>)}
                 </ul>
             </div>
             <div className="sidebarItem">

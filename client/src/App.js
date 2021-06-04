@@ -6,8 +6,10 @@ import Single from './Pages/Single/Single.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
 import { Route } from 'react-router-dom'
+import { Context } from './context/Context.js';
+import { useContext } from 'react';
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <div className="App">
       <Appbar />

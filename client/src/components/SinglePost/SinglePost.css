@@ -4,7 +4,8 @@
 .singlePostWrapper{
     padding: 20px;
     padding-right:0px ;
-
+    display: flex;
+    flex-direction: column;
 }
 .singlePostImage{
     width: 100%;
@@ -17,6 +18,16 @@
     margin:10px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
+}
+.singlePostTitleInput{
+    margin:10px;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+.singlePostTitleInput:focus{
+    outline: none;
 }
 .singlePostEdit{
     float: right;
@@ -33,9 +44,28 @@
 }
 .singlePostDesc{
     color: #a0937d;
+    font-size: 20px;
+}
+.singlePostDescInput{
+    color: #a0937d;
+    border: none;
+    font-size: 20px;
+}
+.singlePostDescInput:focus{
+    outline:none;
 }
 .singlePostDesc::first-letter{
     margin-left: 20px;
     font-size: 30px;
 
+}
+.singlePostUpdateButton{
+    align-self:center;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #00adb5;
+    width: 90px;
+    color: white;
+    cursor: pointer;
 }
