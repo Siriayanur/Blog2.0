@@ -19,10 +19,7 @@ function Appbar()
     return (
         <div className="top">
             <div className="topLeft">
-                <GitHubIcon    className="topClassIcon"/>
-                <LinkedInIcon  className="topClassIcon"/>
-                <InstagramIcon className="topClassIcon"/>
-                <TwitterIcon   className="topClassIcon"/>
+                <b>Blog 2.0</b>
             </div>
             <div className="topCenter">
                 <ul className="topCenterList">
@@ -36,7 +33,7 @@ function Appbar()
             <div className="topRight">
                 {user ? (
                     <>
-                        <Link to="/settings"><img className="topRightImage" src={PF + user.profilePicture} /></Link>
+                        <Link to="/settings"><img className="topRightImage" src={user.profilePicture ? PF + user.profilePicture : PF+'noDp.png'} /></Link>
                         <i>
                             <SearchIcon className="searchIcon"/>
                         </i>
@@ -44,7 +41,7 @@ function Appbar()
 
                 ) : (
                         <ul className="topCenterList">
-                            <li className="topCenterListItem"><Link to="/login" style={{textDecoration: 'none', color: 'inherit'}}>LOGIN </Link></li>
+                            <li className="topCenterListItem"><Link to="/login" style={{textDecoration: 'none', color: 'inherit',marginRight : '70px'}}>LOGIN </Link></li>
                             <li className="topCenterListItem"><Link to="/register" style={{textDecoration: 'none', color: 'inherit'}}>REGISTER </Link></li>
                         </ul>
                             

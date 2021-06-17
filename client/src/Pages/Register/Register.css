@@ -1,5 +1,5 @@
 .register{
-    height: calc(100vh - 45px);
+    height: calc(100vh - 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +15,7 @@
 .registerTitle{
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
+    color: #424874;
 }
 .registerForm{
     margin-top: 20px;

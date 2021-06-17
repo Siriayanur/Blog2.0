@@ -7,29 +7,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sidebarTitle{
-    font-family: 'Roboto Slab', serif;
-    margin: 10px;
-    padding: 7px;
-    width: 85%;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-    border-bottom: 1px solid #8e929a;
-    border-top: 1px solid #8e929a;
+   height: 600px;
 }
 .sidebarItem{
         display: flex;
         flex-direction:column ;
         align-items: center;
 }
-.sidebarItem > img{
-    margin-top: 15px;
+.sidebarUserDetails{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 20px;
 }
-.sidebarItem > p{
-    padding: 15px;
+
+.sidebarUserDetailsItem{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #BA135D;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sidebarTitle{
+    font-family: 'Roboto Slab', serif;
+    margin: 20px 10px;
+    padding: 7px;
+    width: 85%;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-bottom: 1px solid #8e929a;
+    border-top: 1px solid #8e929a;
 }
 .sidebarList{
     list-style:none;
@@ -43,19 +54,9 @@
     /*  width for each item is 50% */
 }
 
-.sidebarSocial{
-    margin-top: 15px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.sidebarIcon{
-    cursor: pointer;
-    text-decoration: none;
-    color:#00adb5;
-    font-size: 16px;
-    margin-left: 10px;
+.userProfilePicture{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 20px;
 }

@@ -12,6 +12,11 @@ function Alert(props) {
 }
 function Create() {
     const { user } = useContext(Context);
+    //Changing
+    const [categories, setCategories] = useState([]);
+    const [cat, setCat] = useState('');
+    //Changing
+
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
     const [file, setFile] = useState(null);
@@ -24,6 +29,21 @@ function Create() {
 
             setError(false);
     };
+    //Changing
+
+    const handleCategoriesAddition = () => {
+        categories.push(cat);
+        setCategories(categories);
+        console.log(categories);
+        setCat('');
+    }
+
+    const handleDelete = (catToDelete) => {
+        let newCategories = categories.filter(c => c !== catToDelete);
+        setCategories(newCategories);
+    }
+
+    //Changing
 
     const handleSubmit = async (e) =>
     {
@@ -33,6 +53,7 @@ function Create() {
             desc: desc,
             username: user.username,
             bgColor: bgColor,
+            categories
         };
         if (file)
         {
@@ -69,7 +90,19 @@ function Create() {
     return (
         <div className="create">
             {file &&  <img className="postImage" src={URL.createObjectURL(file)} />}
-           
+            {/* Changing */}
+            <div className="createCategories">
+                <div className="categoryDisplay">
+                    {categories?.map((c,i) => <div onClick={() => {handleDelete(c)}} className="categoryItem" key={i}>{c}</div>)}
+                </div>
+                    <input type="text" placeholder="set categories"
+                        id="" className="createInput addCategoryText" autoFocus={true}
+                    onChange={e => setCat(e.target.value)} value={cat} />
+                    <button className="addCategoryButton" onClick={handleCategoriesAddition}>Add</button>
+                </div>
+
+            {/* Changing */}
+
             <div className="colorGrid">
                 <div className="first">
                     <div className="firstFirst" onClick={ (e) => setBgColor('#b2b8a3')}/>
@@ -80,7 +113,6 @@ function Create() {
                     <div className="firstSecond" onClick={ (e) => setBgColor('#deedf0')}/>
                     <div className="secondSecond" onClick={ (e) => setBgColor('#f4c7ab')}/>
                     <div className="thirdSecond" onClick={ (e) => setBgColor('#f1ca89')}/>
-
                 </div>
             </div>
             <form className="createForm" onSubmit={handleSubmit}>

@@ -1,5 +1,5 @@
 .login{
-    height: calc(100vh - 45px);
+    height: calc(100vh - 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,8 +13,10 @@
     object-fit: cover;
 }
 .loginTitle{
-    font-size: 50px;
+    font-size: 55px;
+    letter-spacing: 2px;
     font-family: 'Indie Flower', cursive;
+    color: #424874;
 }
 .loginForm{
     margin-top: 20px;

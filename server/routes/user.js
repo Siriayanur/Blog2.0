@@ -59,6 +59,16 @@ router.delete('/:id', async (req, res) =>
 
 })
 
+//Get all users who are currently registered 
+router.get('/', async (req, res) =>
+{
+    try {
+        const users = await User.find();
+        res.status(200).send(users);
+    } catch (e) {
+        res.status(500).send(e);
+    }
+})
 
 //Get user
 router.get('/:id', async (req, res) =>

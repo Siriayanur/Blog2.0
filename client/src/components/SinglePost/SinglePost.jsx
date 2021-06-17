@@ -6,7 +6,6 @@ import { useLocation } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
-import { Input } from '@material-ui/core';
 function SinglePost()
 {
 

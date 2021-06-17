@@ -1,5 +1,7 @@
 .post {
   width: 385px;
+  /* height: 500px; */
+  padding: 10px;
   margin: 0px 25px 40px 25px;
   display: flex;
   flex-direction: column;
@@ -20,10 +22,10 @@
 
 .postCategory {
   font-weight: 400;
-  font-size: 11px;
-  color: #00adb5;
+  font-size: 20px;
+  color: #BF1363;
   line-height: 19px;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -31,6 +33,7 @@
 .postTitle {
   font-size: 22px;
   font-weight: 700;
+  color: #1c1f22;
   margin-top: 15px;
   cursor: pointer;
 }
@@ -38,16 +41,16 @@
 .postDate {
   font-family: "Lora", serif;
   font-style: italic;
-  font-size: 13px;
-  font-weight: 400;
-  color: #999999;
+  font-size: 15px;
+  font-weight: bold;
+  color: #949191;
   margin-top: 15px;
 }
 
 .postDesc {
   font-weight: 400;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 24px;
   color: #1c1f22;
   margin-top: 15px;

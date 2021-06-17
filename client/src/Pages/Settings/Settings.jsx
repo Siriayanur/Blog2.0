@@ -82,7 +82,7 @@ function Settings()
                     <label>Profile Picture</label>
                      <div className="settingsPP">
                         <img
-                        src={(file && URL.createObjectURL(file)) || (PF + user.profilePicture)}
+                        src={(file && URL.createObjectURL(file)) || (user.profilePicture ? PF + user.profilePicture : PF + 'noDp.png')}
                         alt=""
                         />
                         <label htmlFor="fileInput">
